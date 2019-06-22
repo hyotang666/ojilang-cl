@@ -5,10 +5,10 @@
 (in-package :ojilang-cl)
 
 ;;;; IMPLEMENTED
-; quote function let let* if
+; quote function let let* if setq
 
 ;;;; NIY
-; block progn catch locally go progv symbol-macrolet load-time-value macrolet unwind-protect flet throw eval-when multiple-value-call return-from the tagbody setq labels multiple-value-prog1
+; block progn catch locally go progv symbol-macrolet load-time-value macrolet unwind-protect flet throw eval-when multiple-value-call return-from the tagbody labels multiple-value-prog1
 
 (defvar *vocabulary* (make-hash-table))
 
@@ -98,4 +98,8 @@
 
 (defoji loop(&rest args)
   (format nil "いつまでも一緒にいようね❤️ ❤️ ~%~{~A~%~}大スキだよ💏"
+	  (mapcar #'ojilang args)))
+
+(defoji setq(&rest args)
+  (format nil "やっぱり~{~Aチャンとは~A~%~}ホントだよ❓σ^_^;汗汗💦💦"
 	  (mapcar #'ojilang args)))
