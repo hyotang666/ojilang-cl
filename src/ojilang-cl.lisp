@@ -70,7 +70,7 @@
 	  (close-paren)))
 
 (defoji if(pred then &optional else)
-  (format nil "もしかしてだけど、~Aﾉｼ~%だとしたら~A❤️~%~@[えっ❓違う❓❓💦💦~%じゃあ~A~]ナンチャッテ（笑）"
+  (format nil "暇ができたらさ、~Aﾉｼ~%大丈夫なら~A❤️~%~@[えっ❓違う❓❓💦💦~%じゃあ~A~]ナンチャッテ（笑）"
 	  (ojilang pred)
 	  (ojilang then)
 	  (ojilang else)))
