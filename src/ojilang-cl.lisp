@@ -33,7 +33,7 @@
   (format nil "(^_^)v"))
 
 (defun default-funcall(expression)
-  (format nil "一度~Sしてみたいなぁ😍😍~{~A❓~}どうカナ💦💦"
+  (format nil "今度~Sしてみない😍❓~{~A❓~}どうカナ💦💦"
 	  (car expression)
 	  (mapcar #'ojilang (cdr expression))))
 
