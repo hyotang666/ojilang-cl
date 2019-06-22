@@ -97,7 +97,7 @@
 	  (ojilang return)))
 
 (defoji setq(&rest args)
-  (format nil "やっぱり~{~Aチャンとは~A~%~}ホントだよ❓σ^_^;汗汗💦💦"
+  (format nil "突然だけど、~{~Aチャン、~A~%~}やっぱりおじさんとはイヤかなσ(^_^);汗汗💦💦"
 	  (mapcar #'ojilang args)))
 
 (defoji progn(&rest args)
