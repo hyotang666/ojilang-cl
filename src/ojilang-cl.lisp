@@ -5,10 +5,10 @@
 (in-package :ojilang-cl)
 
 ;;;; IMPLEMENTED
-; quote function let let* if setq
+; quote function let let* if setq block return-from tagbody go
 
 ;;;; NIY
-; block progn catch locally go progv symbol-macrolet load-time-value macrolet unwind-protect flet throw eval-when multiple-value-call return-from the tagbody labels multiple-value-prog1
+; progn catch locally progv symbol-macrolet load-time-value macrolet unwind-protect flet throw eval-when multiple-value-call the labels multiple-value-prog1
 
 (defvar *vocabulary* (make-hash-table))
 
