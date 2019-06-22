@@ -12,6 +12,19 @@
   `(setf (gethash ',symbol *vocabulary*)
 	 (lambda,lambda-list,@body)))
 
+(defun ojilang(expression)
+  (typecase expression
+    (atom expression)
+    (list (let((lang(gethash(car expression)*vocabulary*)))
+	    (if lang
+	      (apply lang (cdr expression))
+	      (default-funcall expression))))))
+
+(defun default-funcall(expression)
+  (format nil "僕と~Sどうかな😜❓~{~A❓~}ナンチャッテ（笑）"
+	  (car expression)
+	  (mapcar #'ojilang (cdr expression))))
+
 (defoji quote(expression)
   (format nil "~Sとかどうかな😅😅？" expression))
 
