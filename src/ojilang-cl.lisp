@@ -103,3 +103,8 @@
 (defoji progn(&rest args)
   (format nil "早く会いたいよ〜🥺 ~%~{~A~%~}待っててね❗❓"
 	  (mapcar #'ojilang args)))
+
+(defoji the(type form)
+  (format nil "これは~Sだけど、大丈夫❓~%~A"
+	  type
+	  (ojilang form)))
