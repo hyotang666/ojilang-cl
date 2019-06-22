@@ -20,6 +20,12 @@
 	      (apply lang (cdr expression))
 	      (default-funcall expression))))))
 
+(defun open-paren()
+  (format nil "ヤッホー(^з<)"))
+
+(defun close-paren()
+  (format nil "(^_^)v"))
+
 (defun default-funcall(expression)
   (format nil "僕と~Sどうかな😜❓~{~S❓~}ナンチャッテ（笑）"
 	  (car expression)
