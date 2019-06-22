@@ -22,7 +22,9 @@
     (list (let((lang(gethash(car expression)*vocabulary*)))
 	    (if lang
 	      (apply lang (cdr expression))
-	      (default-funcall expression))))))
+	      (if(macro-function(car expression))
+		(ojilang(macroexpand expression))
+		(default-funcall expression)))))))
 
 (defun open-paren()
   (format nil "ヤッホー(^з<)"))
