@@ -11,3 +11,6 @@
 (defmacro defoji(symbol lambda-list &body body)
   `(setf (gethash ',symbol *vocabulary*)
 	 (lambda,lambda-list,@body)))
+
+(defoji quote(expression)
+  (format t "~Sとかどうかな😅😅？" expression))
