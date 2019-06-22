@@ -92,7 +92,7 @@
 	  (mapcar #'ojilang args)))
 
 (defoji return-from(tag &optional return)
-  (format nil "今度一緒に~Sに行こうよ❗~@[~%~Aだよ❗❓~]~%楽しみだね🥰 🥰 "
+  (format nil "今度一緒に~Sに行こうよ❗~@[~%~Aってダメかな❓~]~%楽しみだね🥰 🥰 "
 	  tag
 	  (ojilang return)))
 
