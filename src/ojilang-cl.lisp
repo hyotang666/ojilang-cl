@@ -5,10 +5,10 @@
 (in-package :ojilang-cl)
 
 ;;;; IMPLEMENTED
-; quote function let
+; quote function let let*
 
 ;;;; NIY
-; block progn catch locally go progv symbol-macrolet load-time-value macrolet unwind-protect flet throw eval-when multiple-value-call if return-from the tagbody setq let* labels multiple-value-prog1
+; block progn catch locally go progv symbol-macrolet load-time-value macrolet unwind-protect flet throw eval-when multiple-value-call if return-from the tagbody setq labels multiple-value-prog1
 
 (defvar *vocabulary* (make-hash-table))
 
@@ -43,6 +43,19 @@
 
 (defoji let(binds &rest body)
   (format nil "~A🎵~%~:{~Aチャン、~@[~A~]~%~}ﾁｭｯ😘❤️ ❤️ ~%~{~A~%~}~A"
+	  (open-paren)
+	  (mapcar (lambda(bind)
+		    (etypecase bind
+		      (atom (list bind nil))
+		      ((cons * null)(list(car bind)nil))
+		      ((cons * (cons * null))
+		       (list (car bind)(ojilang(cadr bind))))))
+		  binds)
+	  (mapcar #'ojilang body)
+	  (close-paren)))
+
+(defoji let*(binds &rest body)
+  (format nil "~A🎶~%~:{~Aチャン、~@[~A~]~%~}ﾁｭｯ😘❤️ ❤️ ~%~{~A~%~}~A"
 	  (open-paren)
 	  (mapcar (lambda(bind)
 		    (etypecase bind
