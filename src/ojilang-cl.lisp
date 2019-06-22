@@ -66,3 +66,9 @@
 		  binds)
 	  (mapcar #'ojilang body)
 	  (close-paren)))
+
+(defoji if(pred then else)
+  (format nil "もしかしてだけど、~Sだったりするのカナ❓❓~%だとしたら~S❤️~%えっ❓違う❓❓💦💦~%じゃあ~Sナンチャッテ（笑）"
+	  (ojilang pred)
+	  (ojilang then)
+	  (ojilang else)))
