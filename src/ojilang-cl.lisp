@@ -36,3 +36,16 @@
 
 (defoji function(expression)
   (format nil "~Sとかする🎵😆❓" expression))
+
+(defoji let(binds &rest body)
+  (format nil "~A🎵~%~:{~Aチャン、~@[~A~]~%~}ﾁｭｯ😘❤️ ❤️ ~%~{~A~%~}~A"
+	  (open-paren)
+	  (mapcar (lambda(bind)
+		    (etypecase bind
+		      (atom (list bind nil))
+		      ((cons * null)(list(car bind)nil))
+		      ((cons * (cons * null))
+		       (list (car bind)(ojilang(cadr bind))))))
+		  binds)
+	  (mapcar #'ojilang body)
+	  (close-paren)))
