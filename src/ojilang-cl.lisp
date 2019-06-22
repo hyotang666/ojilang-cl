@@ -83,3 +83,13 @@
 
 (defoji go(tag)
   (format nil "そろそろおじさんと~Sとか行こうよ😝" tag))
+
+(defoji block(tag &rest args)
+  (format nil "おじさんも~Sに行くの、すっごくスキ（＞＿＜）なんだよ❗~%~{~A~%~}なんだか、ドキドキ❤️ しちゃうね(^_^)"
+	  tag
+	  (mapcar #'ojilang args)))
+
+(defoji return-from(tag &optional return)
+  (format nil "今度一緒に~S行こうよ❗~@[~%~Aだよ❗❓~]~%楽しみだね🥰 🥰 "
+	  tag
+	  (ojilang return)))
