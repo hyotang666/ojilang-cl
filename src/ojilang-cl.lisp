@@ -18,7 +18,7 @@
 
 (defun ojilang(expression)
   (typecase expression
-    (atom expression)
+    (atom (prin1-to-string expression))
     (list (let((lang(gethash(car expression)*vocabulary*)))
 	    (if lang
 	      (apply lang (cdr expression))
