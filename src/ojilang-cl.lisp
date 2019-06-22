@@ -4,7 +4,11 @@
   (:export))
 (in-package :ojilang-cl)
 
-; quote block progn catch locally go progv symbol-macrolet load-time-value macrolet unwind-protect flet throw eval-when multiple-value-call if return-from let the tagbody setq let* labels multiple-value-prog1 function
+;;;; IMPLEMENTED
+; quote function let
+
+;;;; NIY
+; block progn catch locally go progv symbol-macrolet load-time-value macrolet unwind-protect flet throw eval-when multiple-value-call if return-from the tagbody setq let* labels multiple-value-prog1
 
 (defvar *vocabulary* (make-hash-table))
 
