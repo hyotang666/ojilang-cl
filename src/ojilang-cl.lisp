@@ -72,3 +72,14 @@
 	  (ojilang pred)
 	  (ojilang then)
 	  (ojilang else)))
+
+(defoji tagbody(&rest args)
+  (format nil "最近連絡くれないけど、忙しいのかな❓~%~{~A~%~}今日も素敵な夢が見られますように❤️ "
+	  (mapcar (lambda(arg)
+		    (typecase arg
+		      (atom (format nil "~Sとか好きだったよね❓" arg))
+		      (t (ojilang arg))))
+		  args)))
+
+(defoji go(tag)
+  (format nil "そろそろおじさんと~Sとか行こうよ😝" tag))
