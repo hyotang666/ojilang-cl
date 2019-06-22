@@ -14,3 +14,6 @@
 
 (defoji quote(expression)
   (format nil "~Sとかどうかな😅😅？" expression))
+
+(defoji function(expression)
+  (format nil "~Sとかする🎵😆❓" expression))
