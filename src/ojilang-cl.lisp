@@ -13,4 +13,4 @@
 	 (lambda,lambda-list,@body)))
 
 (defoji quote(expression)
-  (format t "~Sとかどうかな😅😅？" expression))
+  (format nil "~Sとかどうかな😅😅？" expression))
