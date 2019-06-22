@@ -31,7 +31,7 @@
   (format nil "(^_^)v"))
 
 (defun default-funcall(expression)
-  (format nil "僕と~Sどうかな😜❓~{~Sとか❓~}（≧ ∇ ≦ ）"
+  (format nil "僕と~Sどうかな😜❓~{~Aとか❓~}（≧ ∇ ≦ ）"
 	  (car expression)
 	  (mapcar #'ojilang (cdr expression))))
 
@@ -42,7 +42,7 @@
   (format nil "~Sとかする🎵😆❓" expression))
 
 (defoji let(binds &rest body)
-  (format nil "~A🎵~%~:{~Aチャン、~@[~A~]~%~}ﾁｭｯ😘❤️ ❤️ ~%~{~A~%~}~A"
+  (format nil "~A🎵~%~:{~Sチャン、~@[~A~]~%~}ﾁｭｯ😘❤️ ❤️ ~%~{~A~%~}~A"
 	  (open-paren)
 	  (mapcar (lambda(bind)
 		    (etypecase bind
@@ -55,7 +55,7 @@
 	  (close-paren)))
 
 (defoji let*(binds &rest body)
-  (format nil "~A🎶~%~:{~Aチャン、~@[~A~]~%~}ﾁｭｯ😘❤️ ❤️ ~%~{~A~%~}~A"
+  (format nil "~A🎶~%~:{~Sチャン、~@[~A~]~%~}ﾁｭｯ😘❤️ ❤️ ~%~{~A~%~}~A"
 	  (open-paren)
 	  (mapcar (lambda(bind)
 		    (etypecase bind
@@ -68,7 +68,7 @@
 	  (close-paren)))
 
 (defoji if(pred then else)
-  (format nil "もしかしてだけど、~Sだったりするのカナ❓❓~%だとしたら~S❤️~%えっ❓違う❓❓💦💦~%じゃあ~Sナンチャッテ（笑）"
+  (format nil "もしかしてだけど、~Aだったりするのカナ❓❓~%だとしたら~A❤️~%えっ❓違う❓❓💦💦~%じゃあ~Aナンチャッテ（笑）"
 	  (ojilang pred)
 	  (ojilang then)
 	  (ojilang else)))
