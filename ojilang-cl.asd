@@ -1,7 +1,7 @@
 ; vim: ft=lisp et
 (in-package :asdf)
 (defsystem "ojilang-cl"
-  :version "0.3.0"
+  :version "0.4.2"
   :depends-on
   nil
   :pathname

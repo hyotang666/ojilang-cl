@@ -21,7 +21,7 @@
 	      (default-funcall expression))))))
 
 (defun default-funcall(expression)
-  (format nil "僕と~Sどうかな😜❓~{~A❓~}ナンチャッテ（笑）"
+  (format nil "僕と~Sどうかな😜❓~{~S❓~}ナンチャッテ（笑）"
 	  (car expression)
 	  (mapcar #'ojilang (cdr expression))))
 
