@@ -69,8 +69,8 @@
 	  (mapcar #'ojilang body)
 	  (close-paren)))
 
-(defoji if(pred then else)
-  (format nil "もしかしてだけど、~Aﾉｼ~%だとしたら~A❤️~%えっ❓違う❓❓💦💦~%じゃあ~Aナンチャッテ（笑）"
+(defoji if(pred then &optional else)
+  (format nil "もしかしてだけど、~Aﾉｼ~%だとしたら~A❤️~%~@[えっ❓違う❓❓💦💦~%じゃあ~A~]ナンチャッテ（笑）"
 	  (ojilang pred)
 	  (ojilang then)
 	  (ojilang else)))
