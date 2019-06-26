@@ -5,10 +5,10 @@
 (in-package :ojilang-cl)
 
 ;;;; IMPLEMENTED
-; quote function let let* if setq block return-from tagbody go progn
+; quote function let let* if setq block return-from tagbody go progn eval-when
 
 ;;;; NIY
-; catch locally progv symbol-macrolet load-time-value macrolet unwind-protect flet throw eval-when multiple-value-call the labels multiple-value-prog1
+; catch locally progv symbol-macrolet load-time-value macrolet unwind-protect flet throw multiple-value-call the labels multiple-value-prog1
 
 (defvar *vocabulary* (make-hash-table))
 
@@ -108,3 +108,10 @@
   (format nil "これは~Sだけど、大丈夫❓~%~A"
 	  type
 	  (ojilang form)))
+
+(defoji eval-when(when &rest body)
+  (format nil "いつならあいてる❓~A~{~A❓~}~A~%~{~A~%~}"
+	  (open-paren)
+	  (mapcar #'ojilang when)
+	  (close-paren)
+	  (mapcar #'ojilang body)))
