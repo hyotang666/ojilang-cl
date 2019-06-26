@@ -27,7 +27,7 @@
 		(default-funcall expression)))))))
 
 (defun open-paren()
-  (format nil "ヤッホー(^з<)"))
+  (format nil "(^з<)"))
 
 (defun close-paren()
   (format nil "(^_^)v"))
